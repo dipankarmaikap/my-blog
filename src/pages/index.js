@@ -1,8 +1,8 @@
 import React from "react"
 import { graphql } from "gatsby"
 import { Link } from "gatsby"
-import Layout from "../components/Layout"
-import Seo from "../components/Seo"
+import SEO from "./../components/Seo"
+import Layout from "./../components/Layout"
 
 const IndexPage = ({ data }) => {
   const latestPosts = data?.allMdx?.nodes
@@ -10,7 +10,7 @@ const IndexPage = ({ data }) => {
 
   return (
     <Layout>
-      <Seo title="Home" />
+      <SEO title="Home" />
       {latestPosts &&
         latestPosts.map(post => (
           <article key={post.id}>
