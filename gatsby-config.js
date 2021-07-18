@@ -20,14 +20,14 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `posts`,
-        path: `${__dirname}/src/posts/`,
+        path: `${__dirname}/src/posts`,
       },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `snippets`,
-        path: `${__dirname}/src/snippets/`,
+        path: `${__dirname}/src/snippets`,
       },
     },
     `gatsby-plugin-mdx`,
