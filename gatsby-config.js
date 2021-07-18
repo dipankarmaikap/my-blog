@@ -35,13 +35,6 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
     {
-      resolve: `gatsby-plugin-dark-mode`,
-      options: {
-        node: "html",
-      },
-    },
-    // `gatsby-plugin-dark-mode`,
-    {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `Dipankar Maikap`,
