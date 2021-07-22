@@ -16,6 +16,7 @@ module.exports = {
       },
       colors: {
         gray: colors.gray,
+        link: "#cd2653",
       },
     },
   },

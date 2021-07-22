@@ -12,10 +12,19 @@
       U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212,
       U+2215, U+FEFF, U+FFFD;
   }
+  html {
+    scroll-behavior: smooth;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+  a,
+  button {
+    @apply focus:outline-black dark:focus:outline-white;
+  }
   body {
     @apply bg-white text-gray-900 dark:bg-gray-900 dark:text-white;
-  }
-  button {
-    @apply focus:outline-none focus:ring-2 ring-indigo-600;
   }
 }

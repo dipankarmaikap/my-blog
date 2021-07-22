@@ -8,10 +8,10 @@ export default function DarkMode() {
   const { theme, setTheme } = useDarkMode()
   return (
     <>
-      <div className="toggle flex bg-gray-100 dark:bg-gray-800">
+      <div className="toggleflex">
         <button
           onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-          className="toggle-button px-4"
+          className="toggle-button hover:underline flex flex-col justify-center items-center px-2 py-1 max-w-[44px] focus:outline-black"
           aria-label="toggle-dark-mode"
         >
           {theme === "dark" ? (
@@ -19,6 +19,9 @@ export default function DarkMode() {
           ) : (
             <Moon stockWidth={1.5} className="w-7 h-7" />
           )}
+          <span className="text-[10px] font-semibold text-gray-500 dark:text-gray-300 h-5">
+            {theme === "dark" ? "Light" : "Dark"}
+          </span>
         </button>
       </div>
     </>

@@ -6,61 +6,66 @@ import MobileNav from "./MobileNav"
 
 function Header() {
   return (
-    <header className="border-b dark:border-gray-700 mt-0.5 smooth">
-      <div className="flex flex-wrap items-stretch justify-between px-4">
-        <div className="site-branding py-2">
-          <Link
-            className="text-4xl font-medium uppercase flex items-center"
-            to="/"
-          >
-            <div className="me ring-2 ring-gray-700 dark:ring-white">
-              <StaticImage
-                width={50}
-                height={50}
-                src="../images/My-Profile-Picture.png"
-                title="Dipankar Maikap"
-                alt="Dipankar Maikap"
-              />
-            </div>
-            <span className="hidden">Dipankar Maikap</span>
-          </Link>
-          {/* <span className="block">{description}</span> */}
+    <header id="site-header" className="mt-0.5">
+      <div className="max-w-[105rem] mx-auto flex flex-wrap items-center justify-between p-4">
+        <div className="lg:hidden">
+          <DarkMode />
         </div>
-        <div className="navigation flex">
-          <nav className="text-xl space-x-2 hidden sm:flex">
-            <Link
-              className="nav-item h-full flex items-center px-4 hover:bg-gray-100 dark:hover:bg-gray-800 smooth"
-              activeClassName="bg-gray-100 dark:bg-gray-800"
-              to="/about"
-            >
-              About
+        <div className="site-branding flex flex-col lg:flex-row lg:space-x-4 items-center">
+          <div className="site-title text-2xl font-medium sm:font-bold">
+            <Link className="hover:underline" to="/">
+              Dipankar Maikap
             </Link>
-            <Link
-              className="nav-item h-full flex items-center px-4 hover:bg-gray-100 dark:hover:bg-gray-800 smooth"
-              activeClassName="bg-gray-100 dark:bg-gray-800"
-              to="/blog"
-            >
-              Blog
-            </Link>
-            <Link
-              className="nav-item h-full flex items-center px-4 hover:bg-gray-100 dark:hover:bg-gray-800 smooth"
-              activeClassName="bg-gray-100 dark:bg-gray-800"
-              to="/snippets"
-            >
-              Snippets
-            </Link>
-            <Link
-              className="nav-item h-full flex items-center px-4 hover:bg-gray-100 dark:hover:bg-gray-800 smooth"
-              activeClassName="bg-gray-100 dark:bg-gray-800"
-              to="/contact"
-            >
-              Contact
-            </Link>
-          </nav>
-          <div className="icones flex space-x-3">
-            <DarkMode />
-            <MobileNav />
           </div>
+          <div className="hidden sm:block site-desc text-lg font-medium text-[#6d6d6d]">
+            Web developer & content creator
+          </div>
+        </div>
+        <div className="navigation  space-x-6 hidden lg:flex">
+          <nav className="text-lg font-medium space-x-6 hidden sm:flex items-center">
+            <div className="flex items-center space-x-6">
+              <Link
+                className="text-link hover:underline"
+                activeClassName="underline"
+                to="/"
+              >
+                Home
+              </Link>
+              <Link
+                className="text-link hover:underline"
+                activeClassName="underline"
+                to="/about"
+              >
+                About
+              </Link>
+              <Link
+                className="text-link hover:underline"
+                activeClassName="underline"
+                to="/blog"
+              >
+                Blog
+              </Link>
+              <Link
+                className="text-link hover:underline"
+                activeClassName="underline"
+                to="/snippets"
+              >
+                Snippets
+              </Link>
+              <Link
+                className="text-link hover:underline"
+                activeClassName="underline"
+                to="/contact"
+              >
+                Contact
+              </Link>
+            </div>
+            <div className="w-[1px] h-6 bg-gray-500 dark:bg-gray-300"></div>
+            <DarkMode />
+          </nav>
+        </div>
+        <div className="mobile-nav lg:hidden">
+          <MobileNav />
         </div>
       </div>
     </header>

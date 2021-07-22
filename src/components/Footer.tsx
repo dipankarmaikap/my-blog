@@ -1,55 +1,38 @@
 import React from "react"
 import { Link } from "gatsby"
-import Github from "./icons/Github"
-import Twitter from "./icons/Twitter"
-import Youtube from "./icons/Youtube"
-import Linkedin from "./icons/Linkedin"
-import Email from "./icons/Email"
 export default function Footer() {
   return (
     <>
-      <footer className="text-center border-t dark:border-gray-700 py-8">
-        <div className="px-4">
-          <div className="social flex space-x-4 justify-center">
-            <a title="Github" href="http://">
-              <Github className="w-7 h-7 fill-current" />
-            </a>
-            <a title="Twitter" href="http://">
-              <Twitter className="w-7 h-7 fill-current" />
-            </a>
-            <a title="Youtube" href="http://">
-              <Youtube className="w-7 h-7 fill-current" />
-            </a>
-            <a title="Linkedin" href="http://">
-              <Linkedin className="w-7 h-7 fill-current" />
-            </a>
-            <a title="Email" href="http://">
-              <Email className="w-7 h-7 fill-current" />
+      <footer>
+        <div className="px-4 py-6 max-w-[75rem] mx-auto">
+          <div className="flex items-center justify-between">
+            <div className="credit">
+              <p className="font-bold text-lg">
+                © {new Date().getFullYear()}
+                {` `}
+                <Link title="About me" className="hover:underline" to="/about">
+                  Dipankar Maikap
+                </Link>
+              </p>
+            </div>
+            <a
+              className="to-the-top text-lg text-[#6d6d6d] dark:text-gray-200 hover:underline"
+              href="#site-header"
+            >
+              <span className="to-the-top-long hidden sm:block">
+                To the top{" "}
+                <span className="arrow" aria-hidden="true">
+                  ↑
+                </span>{" "}
+              </span>
+              <span className="to-the-top-short sm:hidden">
+                Up{" "}
+                <span className="arrow" aria-hidden="true">
+                  ↑
+                </span>{" "}
+              </span>
             </a>
           </div>
-          <p className="my-6">
-            Want to work with me? {` `}
-            <strong>
-              <Link
-                title="Send me a message"
-                className="underline"
-                to="/contact"
-              >
-                Send me a message
-              </Link>
-            </strong>
-            .
-          </p>
-          <p>
-            Copyright © 2019 - {new Date().getFullYear()}. Website designed and
-            developed by {` `}
-            <strong>
-              <Link title="About me" className="underline" to="/about">
-                me
-              </Link>
-            </strong>
-            .
-          </p>
         </div>
       </footer>
     </>

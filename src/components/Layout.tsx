@@ -8,13 +8,7 @@ const Layout = ({ children }) => {
     <>
       <ScrollProgressbar />
       <Header />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 786,
-        }}
-        className="p-4"
-      >
+      <div className="bg-[#f5efe0] dark:bg-gray-800">
         <main>{children}</main>
       </div>
       <Footer />

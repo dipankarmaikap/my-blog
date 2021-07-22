@@ -17,10 +17,10 @@ export default function ScrollProgressbar() {
   }, [])
   return (
     <>
-      <div className="progress-bar-container fixed w-full top-0 bg-gray-200">
+      <div className="progress-bar-container fixed w-full top-0 bg-gray-200 dark:bg-gray-600">
         <div
           style={{ width: `${progress}%` }}
-          className="progress-bar h-0.5 bg-gradient-to-r from-green-400 to-blue-500 w-0"
+          className="progress-bar h-0.5 bg-link w-0"
         ></div>
       </div>
     </>
